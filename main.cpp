@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cstdio>
 
 #include "Structs.h"
 
@@ -27,8 +28,18 @@ void validate() {
   }
 }
 
+void redirect_io(const std::string& input_file, const std::string& output_file) {
+  freopen(input_file, "r", stdin);
+  freopen(output_file, "w", stdout);
+}
+
 void run() {
+
+  // Uncomment below to redirect input and output
+  // redirect_io("me_at_zoo.in", "result.out")
+
   Data data;
+  data.init();
 }
 
 int main() {
