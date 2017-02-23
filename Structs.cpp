@@ -18,7 +18,7 @@ void Data::init() {
     std::cin >> size;
 
     // There is no need to add video with size greater than cache_capacity
-    if (size > cache_capacity) {
+    if (size <= cache_capacity) {
       video_sizes.push_back(size);
     }
 
@@ -41,6 +41,7 @@ void Data::init() {
       endpoint.endpoint_caches.push_back(cache);
     }
 
+    endpoints.push_back(endpoint);
   }
 
   // Initialization requests
